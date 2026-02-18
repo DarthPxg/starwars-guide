@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'star-jedi';
+    src: url('./fonts/StarJedi.woff2') format('woff2'),
+        url('./fonts/StarJedi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+/* Stars background */
+
+body {
+  background: radial-gradient(circle, #000, #0c1e3f);
+  height: 100vh;
+}
+
+.wrapper span {
+  position: fixed;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.wrapper span i {
+  color: #fff;
+  font-size: 8px;
+}
+
+.wrapper span:nth-child(1)  { left: 60px;  top: 5%;  font-size: 6px;  animation-duration: 2.5s; animation-delay: 0.6s; }
+.wrapper span:nth-child(2)  { left: 10%;   top: 40%; font-size: 10px; animation-duration: 3.5s; animation-delay: 2s;   }
+.wrapper span:nth-child(3)  { left: 20%;   top: 15%; font-size: 7px;  animation-duration: 4s;   animation-delay: 5s;   }
+.wrapper span:nth-child(4)  { left: 26%;   top: 67%; font-size: 9px;  animation-duration: 2.8s; animation-delay: 4s;   }
+.wrapper span:nth-child(5)  { left: 40%;   top: 85%; font-size: 6px;  animation-duration: 3.2s; animation-delay: 0.5s; }
+.wrapper span:nth-child(6)  { left: 50%;   top: 23%; font-size: 11px; animation-duration: 5s;   animation-delay: 5s;   }
+.wrapper span:nth-child(7)  { left: 60%;   top: 65%; font-size: 7px;  animation-duration: 3.8s; animation-delay: 6s;   }
+.wrapper span:nth-child(8)  { left: 70%;   top: 12%; font-size: 9px;  animation-duration: 2.6s; animation-delay: 3.5s; }
+.wrapper span:nth-child(9)  { left: 80%;   top: 75%; font-size: 6px;  animation-duration: 4.5s; animation-delay: 9s;   }
+.wrapper span:nth-child(10) { left: 90%;   top: 14%; font-size: 8px;  animation-duration: 3s;   animation-delay: 3s;   }
+
+@keyframes twinkle {
+  0%   { opacity: 0.2; transform: scale(1);    }
+  50%  { opacity: 1;   transform: scale(1.4);  }
+  100% { opacity: 0.2; transform: scale(1);    }
+}
+
+/* Landing page */
+
+.landing_page_main_div {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.starwars_text {
+ color: #FFE81F;
+ font-family: 'star-jedi';
+ font-size: clamp(2rem, 12vw, 8rem);
+ margin-bottom: 0;
+}
+
+.header_subtext {
+  color: #d0d0d0;
+  margin-top: -0.5rem;
+  font-family: "Roboto";
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 3rem);
+  letter-spacing: 0.3rem;
+}
